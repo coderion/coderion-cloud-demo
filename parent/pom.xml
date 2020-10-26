@@ -21,6 +21,7 @@
     <properties>
         <bus-amqp.version>2.2.3.RELEASE</bus-amqp.version>
         <eureka.version>2.2.5.RELEASE</eureka.version>
+        <openfeign.version>2.2.5.RELEASE</openfeign.version>
         <sleuth.version>2.2.5.RELEASE</sleuth.version>
         <sleuth-zipkin.version>2.2.5.RELEASE</sleuth-zipkin.version>
         <zuul.version>2.2.5.RELEASE</zuul.version>

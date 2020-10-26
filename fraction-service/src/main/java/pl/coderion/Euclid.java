@@ -1,6 +1,4 @@
-package pl.coderion.euclid.library;
-
-import pl.coderion.fraction.model.Fraction;
+package pl.coderion;
 
 public class Euclid {
 

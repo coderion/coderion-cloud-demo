@@ -1,4 +1,4 @@
-package pl.coderion.fraction.model;
+package pl.coderion;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

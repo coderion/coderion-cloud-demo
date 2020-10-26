@@ -14,6 +14,7 @@
         <module>eureka-server</module>
         <module>zuul-server</module>
         <module>fraction-service</module>
+        <module>math-service</module>
     </modules>
 
 </project>

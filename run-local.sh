@@ -14,7 +14,11 @@ java -Dspring.profiles.active=local -jar eureka-server/target/eureka-server-*.ja
 sleep 5
 
 echo "fraction-service 8001"
-java -Dspring.profiles.active=local -Dserver.port=8001 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service.log &
+java -Dspring.profiles.active=local -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service.log &
+sleep 5
+
+echo "math-service 8101"
+java -Dspring.profiles.active=local -jar math-service/target/math-service-*.jar > logs/math-service.log &
 sleep 5
 
 echo "zuul-server 8765"

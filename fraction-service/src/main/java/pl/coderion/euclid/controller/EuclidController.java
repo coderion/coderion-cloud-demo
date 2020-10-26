@@ -16,4 +16,11 @@ public class EuclidController {
         log.info(String.format("GCD(%s,%s)=%s", a, b, gcd));
         return gcd;
     }
+
+    @GetMapping("/lcd/{a}/{b}")
+    public Integer getLcd(@PathVariable Integer a, @PathVariable Integer b) {
+        Integer lcd = Euclid.lcd(a, b);
+        log.info(String.format("LCD(%s,%s)=%s", a, b, lcd));
+        return lcd;
+    }
 }

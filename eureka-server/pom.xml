@@ -12,7 +12,15 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fraction-service</artifactId>
+    <artifactId>eureka-server</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>${eureka.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

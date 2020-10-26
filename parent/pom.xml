@@ -19,7 +19,10 @@
     </parent>
 
     <properties>
+        <bus-amqp.version>2.2.3.RELEASE</bus-amqp.version>
         <eureka.version>2.2.5.RELEASE</eureka.version>
+        <sleuth.version>2.2.5.RELEASE</sleuth.version>
+        <sleuth-zipkin.version>2.2.5.RELEASE</sleuth-zipkin.version>
         <zuul.version>2.2.5.RELEASE</zuul.version>
     </properties>
 
@@ -32,6 +35,21 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>${eureka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+            <version>${sleuth.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+            <version>${sleuth-zipkin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <version>${bus-amqp.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

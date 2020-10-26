@@ -16,3 +16,7 @@ sleep 5
 echo "fraction-service 8001"
 java -Dspring.profiles.active=local -Dserver.port=8001 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service.log &
 sleep 5
+
+echo "zuul-server 8765"
+java -Dspring.profiles.active=local -jar zuul-server/target/zuul-server-*.jar > logs/zuul-server.log &
+sleep 5

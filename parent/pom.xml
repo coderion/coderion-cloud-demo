@@ -20,6 +20,7 @@
 
     <properties>
         <eureka.version>2.2.5.RELEASE</eureka.version>
+        <zuul.version>2.2.5.RELEASE</zuul.version>
     </properties>
 
     <dependencies>
@@ -47,6 +48,12 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

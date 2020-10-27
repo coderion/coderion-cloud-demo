@@ -15,6 +15,7 @@
         <module>zuul-server</module>
         <module>fraction-service</module>
         <module>math-service</module>
+        <module>hystrix-dashboard-app</module>
     </modules>
 
 </project>

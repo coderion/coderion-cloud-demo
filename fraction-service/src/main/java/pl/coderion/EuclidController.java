@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EuclidController {
 
     @GetMapping("/fault-tolerance-example")
-    @HystrixCommand(fallbackMethod = "fallbackGcd")
+    @HystrixCommand(fallbackMethod = "fallbackToleranceExample")
     public Integer faultToleranceExample() {
         throw new RuntimeException("fault-tolerance-example");
     }
@@ -49,6 +49,10 @@ public class EuclidController {
         Integer lcd = Euclid.lcd(a, b);
         log.info(String.format("LCD(%s,%s)=%s", a, b, lcd));
         return lcd;
+    }
+
+    public Integer fallbackToleranceExample() {
+        return Euclid.gcd(1, 1);
     }
 
     public Integer fallbackGcd(Integer a, Integer b) {

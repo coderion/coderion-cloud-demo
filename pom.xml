@@ -16,6 +16,7 @@
         <module>fraction-service</module>
         <module>math-service</module>
         <module>hystrix-dashboard-app</module>
+        <module>turbine-server</module>
     </modules>
 
 </project>

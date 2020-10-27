@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: hystrix-dasboard-app
 server:
   port: 7979
 hystrix:

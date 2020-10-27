@@ -11,23 +11,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <relativePath/>
-        <!--  lookup parent from repository  -->
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>Hoxton.SR8</version>
     </parent>
-
-    <properties>
-        <bus-amqp.version>2.2.3.RELEASE</bus-amqp.version>
-        <eureka.version>2.2.5.RELEASE</eureka.version>
-        <hystrix.version>2.2.5.RELEASE</hystrix.version>
-        <hystrix-dashboard.version>2.2.5.RELEASE</hystrix-dashboard.version>
-        <openfeign.version>2.2.5.RELEASE</openfeign.version>
-        <sleuth.version>2.2.5.RELEASE</sleuth.version>
-        <sleuth-zipkin.version>2.2.5.RELEASE</sleuth-zipkin.version>
-        <zuul.version>2.2.5.RELEASE</zuul.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -41,22 +28,18 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>${eureka.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
-            <version>${sleuth.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-sleuth-zipkin</artifactId>
-            <version>${sleuth-zipkin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-            <version>${bus-amqp.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

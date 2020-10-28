@@ -2,6 +2,9 @@
 
 mkdir -p logs
 
+echo export encryption key '"changeme"'
+export ENCRYPT_KEY=changeme
+
 echo "kill instances"
 /usr/bin/pkill -9 -f turbine-server
 /usr/bin/pkill -9 -f hystrix-dashboard-app

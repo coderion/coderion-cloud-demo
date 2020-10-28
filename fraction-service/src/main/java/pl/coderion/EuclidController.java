@@ -4,13 +4,23 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.math3.random.RandomDataGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
+@RefreshScope
 public class EuclidController {
+
+    @Autowired
+    private Configuration configuration;
+
+    @Value("${app.description:empty}")
+    private String appDescription;
 
     @GetMapping("/fault-tolerance-example")
     @HystrixCommand(fallbackMethod = "fallbackToleranceExample")
@@ -49,6 +59,11 @@ public class EuclidController {
         Integer lcd = Euclid.lcd(a, b);
         log.info(String.format("LCD(%s,%s)=%s", a, b, lcd));
         return lcd;
+    }
+
+    @GetMapping("/limits")
+    public String getLimits() {
+        return String.format("%s:%s (%s)", configuration.getMinimum(), configuration.getMaximum(), appDescription);
     }
 
     public Integer fallbackToleranceExample() {

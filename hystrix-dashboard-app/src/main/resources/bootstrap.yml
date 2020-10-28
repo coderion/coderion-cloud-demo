@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: hystrix-dasboard-app
+  cloud:
+    config:
+      uri: http://localhost:8888

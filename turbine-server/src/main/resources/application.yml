@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: turbine-server
-server:
-  port: 8989
-turbine:
-  app-config: fraction-service
-  cluster-name-expression: "'default'"

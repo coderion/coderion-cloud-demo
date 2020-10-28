@@ -25,8 +25,12 @@ echo "eureka-server 8761"
 java -Dspring.profiles.active=local -jar eureka-server/target/eureka-server-*.jar > logs/eureka-server.log &
 sleep 5
 
-echo "fraction-service 8001"
-java -Dspring.profiles.active=local -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service.log &
+echo "fraction-service-1"
+java -Dspring.profiles.active=local -Dmyinstanceid=1 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-1.log &
+sleep 5
+
+echo "fraction-service-2"
+java -Dspring.profiles.active=local -Dmyinstanceid=2 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-2.log &
 sleep 5
 
 echo "math-service 8101"

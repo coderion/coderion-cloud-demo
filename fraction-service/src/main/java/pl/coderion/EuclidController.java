@@ -22,6 +22,9 @@ public class EuclidController {
     @Value("${app.description:empty}")
     private String appDescription;
 
+    @Value("${myinstanceid:0}")
+    private Integer myInstanceId;
+
     @GetMapping("/fault-tolerance-example")
     @HystrixCommand(fallbackMethod = "fallbackToleranceExample")
     public Integer faultToleranceExample() {
@@ -63,7 +66,7 @@ public class EuclidController {
 
     @GetMapping("/limits")
     public String getLimits() {
-        return String.format("%s:%s (%s)", configuration.getMinimum(), configuration.getMaximum(), appDescription);
+        return String.format("%s:%s (%s) myInstanceId: %s", configuration.getMinimum(), configuration.getMaximum(), appDescription, myInstanceId);
     }
 
     public Integer fallbackToleranceExample() {

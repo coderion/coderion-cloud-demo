@@ -26,11 +26,11 @@ java -Dspring.profiles.active=local -jar eureka-server/target/eureka-server-*.ja
 sleep 5
 
 echo "fraction-service-1"
-java -Dspring.profiles.active=local -Dmyinstanceid=1 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-1.log &
+java -Dspring.profiles.active=local -DPORT=8001 -Dmyinstanceid=1 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-1.log &
 sleep 5
 
 echo "fraction-service-2"
-java -Dspring.profiles.active=local -Dmyinstanceid=2 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-2.log &
+java -Dspring.profiles.active=local -DPORT=8002 -Dmyinstanceid=2 -jar fraction-service/target/fraction-service-*.jar > logs/fraction-service-2.log &
 sleep 5
 
 echo "math-service 8101"

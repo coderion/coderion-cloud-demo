@@ -7,3 +7,4 @@
 /usr/bin/pkill -9 -f config-server
 /usr/bin/pkill -9 -f math-service
 /usr/bin/pkill -9 -f fraction-service
+/usr/bin/pkill -9 -f boot-admin-server

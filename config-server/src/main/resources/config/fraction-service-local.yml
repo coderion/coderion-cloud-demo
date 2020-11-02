@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:0}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${server.port}:${spring.application.instance_id:${random.value}}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: threaddump, heapdump
+
+info:
+  email: toudidel@gmail.com
+app:
+  description: v1.0
+fraction-service:
+  minimum: 101
+  maximum: 199

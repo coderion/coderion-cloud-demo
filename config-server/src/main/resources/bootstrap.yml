@@ -8,3 +8,5 @@ spring:
       server:
         git:
           uri: https://github.com/coderion/coderion-cloud-demo-config.git
+      username: configUser
+      password: configPassword

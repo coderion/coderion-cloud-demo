@@ -19,6 +19,7 @@
         <module>turbine-server</module>
         <module>config-server</module>
         <module>boot-admin-server</module>
+        <module>auth-service</module>
     </modules>
 
 </project>

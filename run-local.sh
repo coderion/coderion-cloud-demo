@@ -41,6 +41,6 @@ echo "zuul-server 8765"
 java -Dspring.profiles.active=local -jar zuul-server/target/zuul-server-*.jar > logs/zuul-server.log &
 sleep 5
 
-echo "boot-admin-server 9090"
-java -Dspring.profiles.active=local -jar boot-admin-server/target/boot-admin-server-*.jar > logs/boot-admin-server.log &
+echo "auth-service 8080"
+java -Dspring.profiles.active=local -jar auth-service/target/auth-service-*.jar > logs/auth-service.log &
 sleep 5

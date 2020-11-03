@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: pl.coderion.common.config-server
+    name: config-server
   profiles:
     active: native # because the pl.coderion.common.config server uses a git repo by default
   cloud:

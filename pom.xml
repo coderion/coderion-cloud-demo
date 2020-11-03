@@ -11,8 +11,10 @@
 
     <modules>
         <module>parent</module>
-        <module>eureka-server</module>
+        <module>common-service</module>
+        <module>auth-service</module>
         <module>zuul-server</module>
+        <module>eureka-server</module>
         <module>fraction-service</module>
         <module>math-service</module>
         <module>hystrix-dashboard-app</module>

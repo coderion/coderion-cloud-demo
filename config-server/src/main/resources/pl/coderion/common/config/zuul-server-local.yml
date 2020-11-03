@@ -1,0 +1,13 @@
+server:
+  port: 8765
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+zuul:
+  routes:
+    auth-service:
+      path: /auth/**
+      service-id: AUTH-SERVICE
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie

@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
 
 public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
     
-	private final pl.coderion.common.config.JwtConfig jwtConfig;
+	private final JwtConfig jwtConfig;
 	
-	public JwtTokenAuthenticationFilter(pl.coderion.common.config.JwtConfig jwtConfig) {
+	public JwtTokenAuthenticationFilter(JwtConfig jwtConfig) {
 		this.jwtConfig = jwtConfig;
 	}
 
@@ -39,7 +39,7 @@ public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
 		// If there is no token provided and hence the user won't be authenticated. 
 		// It's Ok. Maybe the user accessing a public path or asking for a token.
 		
-		// All secured paths that needs a token are already defined and secured in pl.coderion.common.config class.
+		// All secured paths that needs a token are already defined and secured in config class.
 		// And If user tried to access without access token, then he won't be authenticated and an exception will be thrown.
 		
 		// 3. Get the token

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private pl.coderion.common.config.JwtConfig jwtConfig;
+    private JwtConfig jwtConfig;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -29,7 +29,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 // Add a filter to validate the tokens with every request
                 .addFilterAfter(new JwtTokenAuthenticationFilter(jwtConfig), UsernamePasswordAuthenticationFilter.class)
-                // authorization requests pl.coderion.common.config
+                // authorization requests config
                 .authorizeRequests()
                 // allow all who are accessing "auth" service
                 .antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
@@ -40,7 +40,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public pl.coderion.common.config.JwtConfig jwtConfig() {
-        return new pl.coderion.common.config.JwtConfig();
+    public JwtConfig jwtConfig() {
+        return new JwtConfig();
     }
 }

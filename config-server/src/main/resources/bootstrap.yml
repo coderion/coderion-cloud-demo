@@ -4,7 +4,7 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native # because the pl.coderion.common.config server uses a git repo by default
+    active: native # because the config server uses a git repo by default
   cloud:
     config:
       server:

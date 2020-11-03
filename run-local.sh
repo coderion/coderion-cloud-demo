@@ -10,7 +10,7 @@ echo "kill instances"
 /usr/bin/pkill -9 -f hystrix-dashboard-app
 /usr/bin/pkill -9 -f zuul-server
 /usr/bin/pkill -9 -f eureka-server
-/usr/bin/pkill -9 -f pl.coderion.config-server
+/usr/bin/pkill -9 -f config-server
 /usr/bin/pkill -9 -f math-service
 /usr/bin/pkill -9 -f fraction-service
 
@@ -18,7 +18,7 @@ echo "build"
 $M2/mvn package > logs/build.log
 
 echo "config-server 8888"
-java -Dspring.profiles.active=local -jar pl.coderion.config-server/target/pl.coderion.config-server-*.jar > logs/pl.coderion.config-server.log &
+java -Dspring.profiles.active=local -jar config-server/target/config-server-*.jar > logs/config-server.log &
 sleep 5
 
 echo "eureka-server 8761"

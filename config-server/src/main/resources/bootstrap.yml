@@ -4,11 +4,22 @@ spring:
   application:
     name: config-server
   profiles:
-    active: native # because the pl.coderion.common.config server uses a git repo by default
+    active: native # because the config server uses a git repo by default
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/pl.coderion.common.config
+          search-locations: classpath:/config
 #        git:
 #          uri: https://github.com/coderion/coderion-cloud-demo-config.git
+
+zuul:
+  routes:
+    uaa:
+      path: /uaa/**
+      sensitiveHeaders:
+      serviceId: auth-server
+    math:
+      path: /math/**
+      sensitiveHeaders:
+      serviceId: math-service

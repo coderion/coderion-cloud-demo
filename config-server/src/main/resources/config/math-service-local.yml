@@ -4,3 +4,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+security:
+  user:
+    name: root
+    password: password
+  oauth2:
+    resource:
+      loadBalanced: true
+      userInfoUri: http://localhost:9999/user

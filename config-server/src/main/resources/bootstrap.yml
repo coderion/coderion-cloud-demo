@@ -12,14 +12,3 @@ spring:
           search-locations: classpath:/config
 #        git:
 #          uri: https://github.com/coderion/coderion-cloud-demo-config.git
-
-zuul:
-  routes:
-    uaa:
-      path: /uaa/**
-      sensitiveHeaders:
-      serviceId: auth-server
-    math:
-      path: /math/**
-      sensitiveHeaders:
-      serviceId: math-service

@@ -18,7 +18,7 @@ echo "build"
 $M2/mvn package > logs/build.log
 
 echo "config-server 8888"
-java -Dspring.profiles.active=local -jar config-server/target/config-server-*.jar > logs/config-server.log &
+java -Dspring.profiles.active=local,native -jar config-server/target/config-server-*.jar > logs/config-server.log &
 sleep 5
 
 echo "eureka-server 8761"

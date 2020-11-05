@@ -4,3 +4,30 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+#zuul:
+#  routes:
+#    oauth:
+#      path: /oauth/**
+#      sensitiveHeaders:
+#      serviceId: oauth-service
+
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: oauth-service
+#          uri: lb://oauth-service
+#          predicates:
+#            - Path=/oauth/**
+#          filters:
+#            - RewritePath=/oauth/(?<path>.*), /oauth/$\{path}
+#        - id: aaa
+#          uri: lb://oauth-service
+#          predicates:
+#            - Path=/aaa/**
+#          filters:
+#            - RewritePath=/oauth/(?<path>.*), /oauth/$\{path}

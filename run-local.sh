@@ -18,7 +18,7 @@ echo "build"
 $M2/mvn package > logs/build.log
 
 echo "config-server 8888"
-java -Dspring.profiles.active=local -jar config-server/target/config-server-*.jar > logs/config-server.log &
+java -Dspring.profiles.active=local,native -jar config-server/target/config-server-*.jar > logs/config-server.log &
 sleep 5
 
 echo "eureka-server 8761"
@@ -37,10 +37,10 @@ echo "math-service 8101"
 java -Dspring.profiles.active=local -jar math-service/target/math-service-*.jar > logs/math-service.log &
 sleep 5
 
-echo "zuul-server 8765"
-java -Dspring.profiles.active=local -jar zuul-server/target/zuul-server-*.jar > logs/zuul-server.log &
+echo "oauth-service 9999"
+java -Dspring.profiles.active=local -jar oauth-service/target/oauth-service-*.jar > logs/oauth-service.log &
 sleep 5
 
-echo "boot-admin-server 9090"
-java -Dspring.profiles.active=local -jar boot-admin-server/target/boot-admin-server-*.jar > logs/boot-admin-server.log &
+echo "zuul-server 8765"
+java -Dspring.profiles.active=local -jar zuul-server/target/zuul-server-*.jar > logs/zuul-server.log &
 sleep 5

@@ -9,6 +9,6 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/pl.coderion.common.config
+          search-locations: classpath:/config
 #        git:
 #          uri: https://github.com/coderion/coderion-cloud-demo-config.git

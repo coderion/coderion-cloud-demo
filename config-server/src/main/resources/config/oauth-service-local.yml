@@ -4,3 +4,24 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    platform: postgres
+    jdbcUrl: jdbc:postgresql://localhost/ideafaktor
+    username: postgres
+    password: postgres
+    testOnBorrow: true
+    testWhileIdle: true
+    testOnReturn: true
+    validationQuery: "SELECT 1"
+    maximumPoolSize: 5
+    minimumIdle: 1
+
+oauth:
+  client:
+    id:
+      client-id: cid
+    secret:
+      client-secret: $ecret

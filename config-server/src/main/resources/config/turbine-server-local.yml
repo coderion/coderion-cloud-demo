@@ -1,0 +1,9 @@
+server:
+  port: 8989
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+turbine:
+  app-config: fraction-service
+  cluster-name-expression: "'default'"
